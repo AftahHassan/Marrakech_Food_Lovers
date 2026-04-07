@@ -17,10 +17,10 @@ if (session_status() === PHP_SESSION_NONE) {
 <div class="splash-container">
 
     <!-- EMOJI SURFEUR au lieu de l'image -->
-    <div class="splash-logo">🏄</div>
+    <div class="splash-logo">🍔</div>
 
-    <h1 class="splash-title">SurfSchool Manager</h1>
-    <p class="splash-subtitle">Taghazout Surf Expo</p>
+    <h1 class="splash-title">Marrakech Food Lovers</h1>
+    <p class="splash-subtitle"> Expo</p>
 
     <!-- BARRE DE CHARGEMENT -->
     <div class="splash-loader">
