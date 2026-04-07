@@ -29,7 +29,6 @@ class User {
         $db =Database :: getInstance();
         $hash = password_hash($password,PASSWORD_BCRYPT);
         $db ->query('INSERT INTO users(username , email ,password ,role) VALUES(?,?,?,?)',[$username ,$email ,$hash ,'student']);
-
     }
 
 
