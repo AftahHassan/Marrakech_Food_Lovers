@@ -33,12 +33,12 @@ if (session_status() === PHP_SESSION_NONE) {
     setTimeout(() => {
         <?php if (isset($_SESSION['user_id'])) : ?>
             <?php if ($_SESSION['role'] === 'admin') : ?>
-                window.location.href = "/surfschool-manager/dashboard.php";
+                window.location.href = "/surfschool-manager./dashboard.php";
             <?php else : ?>
-                window.location.href = "/surfschool-manager/dashboard.php";
+                window.location.href = "/surfschool-manager,/dashboard.php";
             <?php endif; ?>
         <?php else : ?>
-            window.location.href = "/surfschool-manager/login.php";
+            window.location.href = "/surfschool-manager,/login.php";
         <?php endif; ?>
     }, 3000);
 </script>
