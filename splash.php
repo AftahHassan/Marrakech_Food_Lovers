@@ -7,4 +7,5 @@ $controller = new AuthController();
 
 // on appelle la méthode splash qui charge la vue
 $controller->splash();
+
 ?>

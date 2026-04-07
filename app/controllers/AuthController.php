@@ -11,7 +11,7 @@ class AuthController {
 
     // ---- SPLASH ---
     public function splash() {
-        require_once __DIR__ . '/../../splash.php';
+        require_once __DIR__ . '/../views/auth/splash.php';
     }
 
     // ---- LOGIN ----

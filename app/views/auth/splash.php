@@ -10,7 +10,7 @@ if (session_status() === PHP_SESSION_NONE) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SurfSchool Manager | Taghazout</title>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/surfschool-manager/public/css/style.css">
+    <link rel="stylesheet" href="/Marrakech_Food_Lovers/public/css/style.css">
 </head>
 <body class="splash-body">
 
@@ -33,12 +33,12 @@ if (session_status() === PHP_SESSION_NONE) {
     setTimeout(() => {
         <?php if (isset($_SESSION['user_id'])) : ?>
             <?php if ($_SESSION['role'] === 'admin') : ?>
-                window.location.href = "/surfschool-manager./dashboard.php";
+                window.location.href = "/Marrakech_Food_Lovers/dashboard.php";
             <?php else : ?>
-                window.location.href = "/surfschool-manager,/dashboard.php";
+                window.location.href = "/Marrakech_Food_Lovers/dashboard.php";
             <?php endif; ?>
         <?php else : ?>
-            window.location.href = "/surfschool-manager,/login.php";
+            window.location.href = "/Marrakech_Food_Lovers/dashboard.php";
         <?php endif; ?>
     }, 3000);
 </script>
