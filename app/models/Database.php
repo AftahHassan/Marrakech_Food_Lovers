@@ -16,7 +16,7 @@ private function __construct(){
         );
         $this ->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
 
-       echo "correct";
+       //echo "correct";
     }catch(PDOException $e){
         die ('Erreur de connexion : ' . $e->getMessage());
     }
