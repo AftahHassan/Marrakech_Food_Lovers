@@ -25,6 +25,43 @@ class User {
         return $this -> role;
     }
 
+    public function register($username, $email ,$password){
+        $db =Database :: getInstance();
+        $hash = password_hash($password,PASSWORD_BCRYPT);
+        $db ->query('INSERT INTO users(username , email ,password ,role) VALUES(?,?,?,?)',[$username ,$email ,$hash ,'student']);
+
+    }
+
+
+    // partie  Login
+    public function login($email ,$password){
+         $db =Database :: getInstance();
+         $stmt = $db-> query('SELECT *FROM users WHERE email =?',[$email]);
+         $user =$stmt ->fetch(PDO :: FETCH_ASSOC);
+
+           if($user && password_verify($password, $user['password'])){
+              return $user;
+           }
+             return null;
+
+    }
+
+    //trouver  par L id
+    public function findById($id){
+        $db =Database :: getInstance();
+        $stmt = $db ->query('SELECT * FROM users WHERE id = ?', [$id]);
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
+    public function findByEmail($email) {
+        $db   = Database::getInstance();
+        $stmt = $db->query(
+            'SELECT * FROM users WHERE email = ?',
+            [$email]
+        );
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
     
 }
 
