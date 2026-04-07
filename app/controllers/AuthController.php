@@ -9,7 +9,7 @@ class AuthController {
         $this->userModel = new User();
     }
 
-    // ---- SPLASH ----
+    // ---- SPLASH ---
     public function splash() {
         require_once __DIR__ . '/../../splash.php';
     }
