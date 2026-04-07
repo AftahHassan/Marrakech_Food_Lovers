@@ -1,55 +1,44 @@
 <?php require_once __DIR__ . '/../includes/header.php'; ?>
 
-<div class="dashboard-container">
+<div class="auth-wrapper">
+    <div class="auth-container">
 
-    <!-- TITRE -->
-    <div class="dashboard-header">
-        <div class="dashboard-title">🔐 Connexion</div>
-    </div>
+        <h2>🔐 Connexion</h2>
 
-    <!-- MESSAGE ERREUR -->
-    <?php if (isset($error)) : ?>
-        <div class="stat-card">
-            <div class="stat-title"><?= htmlspecialchars($error) ?></div>
-        </div>
-    <?php endif; ?>
+        <?php if (isset($error)) : ?>
+            <div class="alert-error"><?= htmlspecialchars($error) ?></div>
+        <?php endif; ?>
 
-    <!-- FORMULAIRE -->
-    <div class="admin-section">
-        <form method="POST" action="login.php">
+        <form method="POST" action="/Marrakech_Food_Lovers/login.php">
 
-            <div class="stat-card">
-                <div class="stat-title">Email</div>
-                <input 
-                    type="email" 
-                    name="email" 
-                    placeholder="votre@email.com" 
+            <div class="form-group">
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="Email"
                     required
                 >
             </div>
 
-            <div class="stat-card">
-                <div class="stat-title">Mot de passe</div>
-                <input 
-                    type="password" 
-                    name="password" 
-                    placeholder="Mot de passe" 
+            <div class="form-group">
+                <input
+                    type="password"
+                    name="password"
+                    placeholder="Mot de passe"
                     required
                 >
             </div>
 
-            <div class="admin-links">
-                <button type="submit" class="btn btn-category">
-                    🔐 Se connecter
-                </button>
-                <a href="register.php" class="btn btn-users">
-                    📝 Créer un compte
-                </a>
-            </div>
+            <button type="submit">Se connecter</button>
 
         </form>
-    </div>
 
+        <p class="auth-link">
+            Pas encore de compte ?
+            <a href="/Marrakech_Food_Lovers/register.php">S'inscrire</a>
+        </p>
+
+    </div>
 </div>
 
 <?php require_once __DIR__ . '/../includes/footer.php'; ?>
