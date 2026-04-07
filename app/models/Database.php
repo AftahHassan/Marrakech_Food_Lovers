@@ -3,7 +3,7 @@
 
 require_once __DIR__ . '/../../config/db.php';
 class Database{
-private static $instance =null ;
+private static $instance = null ;
 private $pdo;
 
 
@@ -39,7 +39,7 @@ public function query($sql, $params = []) {
 
 }
 
- cest pour tester est ce que la liaison est correcte 
+// cest pour tester est ce que la liaison est correcte 
 Database::getInstance();
 
 ?>
