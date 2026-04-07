@@ -39,7 +39,6 @@ public function query($sql, $params = []) {
 
 }
 
- //cest pour tester est ce que la liaison est correcte 
 Database::getInstance();
 
 ?>
