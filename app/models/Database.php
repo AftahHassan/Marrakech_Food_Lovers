@@ -35,7 +35,7 @@ public function query($sql, $params = []) {
         return $stmt;
 }
 }
-// test connetion 
+// test la connection ou bien la laison 
 Database::getInstance();
 
 ?>
