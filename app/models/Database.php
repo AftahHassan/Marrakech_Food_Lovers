@@ -34,9 +34,6 @@ public function query($sql, $params = []) {
         $stmt->execute($params);
         return $stmt;
 }
-
-
-
 }
 // test connetion 
 Database::getInstance();
