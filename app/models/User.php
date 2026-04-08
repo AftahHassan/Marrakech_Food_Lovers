@@ -57,7 +57,7 @@ class User {
     public function getAllUsers() {
         $db   = Database::getInstance();
         $stmt = $db->query(
-            'SELECT id, username, email, role, created_at FROM users'
+            'SELECT id, username, email, role, created_at FROM users ORDER BY username ASC'
         );
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }

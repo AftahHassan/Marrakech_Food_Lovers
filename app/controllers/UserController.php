@@ -41,7 +41,7 @@ class UserController {
         $id = $_GET['id'] ?? null;
         $this->userModel->deleteUser($id);
 
-        header('Location: /Marrakech_Food_Lovers/admin/users.php');
+        header('Location: /Marrakech_Food_Lovers/index.php?action=users');
         exit();
     }
 }
