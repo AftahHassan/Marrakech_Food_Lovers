@@ -33,7 +33,6 @@ class category {
 
     public function create($name) {
         $db =Database :: getInstance();
-
         return $db->query(
             'INSERT INTO categories(name) VALUES(?)',
             [$name]
