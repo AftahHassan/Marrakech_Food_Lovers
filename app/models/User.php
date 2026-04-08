@@ -61,7 +61,7 @@ class User {
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    // ---- ADMIN : supprimer un user ----
+    // ---- ADMIN : -supprimer un user ----
     public function deleteUser($id) {
         $db = Database::getInstance();
         return $db->query('DELETE FROM users WHERE id = ?', [$id]);
