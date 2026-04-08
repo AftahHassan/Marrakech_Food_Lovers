@@ -4,6 +4,7 @@ require_once __DIR__ . '/../models/Database.php';
 
 class category {
     private $id;
+    
     private $name;
 
     public function getId(){
