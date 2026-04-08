@@ -8,7 +8,7 @@ if (session_status() === PHP_SESSION_NONE) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marrakech_Food_Lovers</title>
+    <title>Marrakech Food Lovers</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -20,8 +20,8 @@ if (session_status() === PHP_SESSION_NONE) {
     <nav>
 
         <!-- LOGO -->
-        <a href="/surfschool-manager/index.php" class="logo">
-            🎉 Marrakech_Food_Lovers
+        <a href="/Marrakech_Food_Lovers/index.php" class="logo">
+            🍽️ Marrakech Food Lovers
         </a>
 
         <!-- LIENS -->
@@ -30,29 +30,31 @@ if (session_status() === PHP_SESSION_NONE) {
 
                 <!-- ✅ ADMIN connecté -->
                 <?php if ($_SESSION['role'] === 'admin') : ?>
-                    <li><a href="/surfschool-manager/dashboard.php" class="admin-link">Dashboard</a></li>
-                    <li><a href="/surfschool-manager/students.php">👥 cuisiners</a></li>
-                    <li><a href="/surfschool-manager/lessons.php">🏄 recette</a></li>
-                    <li><a href="/surfschool-manager/enrollments.php">📋 Inscriptions</a></li>
+                    <li><a href="/Marrakech_Food_Lovers/dashboard.php">📊 Dashboard</a></li>
+                    <li><a href="/Marrakech_Food_Lovers/admin/users.php">👥 Cuisiniers</a></li>
+                    <li><a href="/Marrakech_Food_Lovers/admin/recipes.php">🍽️ Recettes</a></li>
+                    <li><a href="/Marrakech_Food_Lovers/admin/categories.php">🗂️ Catégories</a></li>
 
-                <!-- ✅ STUDENT connecté -->
+                <!-- ✅ CUISINIER connecté -->
                 <?php else : ?>
-                    <li><a href="/surfschool-manager/dashboard.php">Dashboard</a></li>
+                    <li><a href="/Marrakech_Food_Lovers/dashboard.php">🏠 Dashboard</a></li>
+                    <li><a href="/Marrakech_Food_Lovers/create_recipe.php">➕ Nouvelle recette</a></li>
+                    <li><a href="/Marrakech_Food_Lovers/category.php">🗂️ Catégories</a></li>
 
                 <?php endif; ?>
 
-                <!-- DÉCONNEXION — tous les connectés -->
+                <!-- DÉCONNEXION -->
                 <li>
-                    <a href="/surfschool-manager/logout.php">
-                        Déconnexion (<?= htmlspecialchars($_SESSION['username']) ?>)
+                    <a href="/Marrakech_Food_Lovers/logout.php">
+                        🔓 Déconnexion (<?= htmlspecialchars($_SESSION['username']) ?>)
                     </a>
                 </li>
 
             <?php else : ?>
 
                 <!-- ❌ NON CONNECTÉ -->
-                <li><a href="/surfschool-manager/login.php">🔐 Connexion</a></li>
-                <li><a href="/surfschool-manager/register.php">📝 Inscription</a></li>
+                <li><a href="/Marrakech_Food_Lovers/login.php">🔐 Connexion</a></li>
+                <li><a href="/Marrakech_Food_Lovers/register.php">📝 Inscription</a></li>
 
             <?php endif; ?>
         </ul>
