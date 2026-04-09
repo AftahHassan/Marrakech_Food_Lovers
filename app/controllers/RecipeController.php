@@ -17,7 +17,7 @@ class RecipeController {
 
 
     // ---- CUISINIER : mes recettes ----
-          public function dashboard() {
+    public function dashboard() {
     if (session_status() === PHP_SESSION_NONE) session_start();
 
     $category_filter = isset($_GET['category_id']) ? intval($_GET['category_id']) : 0;
@@ -83,8 +83,9 @@ class RecipeController {
 
         $id = $_GET['id'] ?? null;
 
-
-        if (!$id || !$this->recipeModel->isOwner($id, $_SESSION['user_id'])) {
+        // delete the condition !$this->recipeModel->isOwner($id, $_SESSION['user_id'])
+        
+        if (!$id) {
             header('Location: /Marrakech_Food_Lovers/dashboard.php');
             exit();
         }

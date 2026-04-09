@@ -95,8 +95,6 @@ button[type="submit"]:hover { transform: translateY(-3px); }
 
 
         <form action="/Marrakech_Food_Lovers/edit_recipe.php?id=<?= $recipe['id'] ?>" method="POST" class="main-form">
-              method="POST" class="main-form">
-
 
             <div class="form-group">
                 <label for="title">Titre de la recette</label>

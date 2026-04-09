@@ -161,7 +161,7 @@
         </div>
 
         <form method="POST"
-              action="/Marrakech_Food_Lovers/admin/edit_category.php?id=<?= $category['id'] ?>"
+              action="/Marrakech_Food_Lovers/edit_category.php?id=<?= $category['id'] ?>"
               class="main-form">
 
             <?php if (isset($error)) : ?>

@@ -42,7 +42,8 @@ class CategoryController {
 
 
             $this->categoryModel->create($name);
-            header('Location: /Marrakech_Food_Lovers/admin/categories.php');
+            // Change the path of redirect
+            header('Location: /Marrakech_Food_Lovers/index.php?action=categories');
             exit();
 
 
@@ -75,7 +76,7 @@ class CategoryController {
 
 
             $this->categoryModel->update($id, $name);
-            header('Location: /Marrakech_Food_Lovers/admin/categories.php');
+            header('Location: /Marrakech_Food_Lovers/index.php?action=categories');
             exit();
 
 
@@ -94,7 +95,8 @@ class CategoryController {
         $this->categoryModel->delete($id);
 
 
-        header('Location: /Marrakech_Food_Lovers/admin/categories.php');
+        // header('Location: /Marrakech_Food_Lovers/admin/categories.php');
+        header('Location: /Marrakech_Food_Lovers/index.php?action=categories');
         exit();
     }
 }
