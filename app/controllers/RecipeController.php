@@ -4,18 +4,12 @@ require_once __DIR__ . '/../models/Category.php';
 
 
 class RecipeController {
-
-
     private $recipeModel;
     private $categoryModel;
-
-
     public function __construct() {
         $this->recipeModel   = new Recipe();
         $this->categoryModel = new Category();
     }
-
-
     // ---- CUISINIER : mes recettes ----
           public function dashboard() {
     if (session_status() === PHP_SESSION_NONE) session_start();
