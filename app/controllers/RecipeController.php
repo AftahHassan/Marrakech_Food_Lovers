@@ -108,7 +108,7 @@ class RecipeController {
             $this->recipeModel->update($id, $title, $ingredients, $description, $category_id);
 
 
-            header('Location: /Marrakech_Food_Lovers/dashboard.php');
+            header('Location: /Marrakech_Food_Lovers/admin_recipes.php');
             exit();
 
 
