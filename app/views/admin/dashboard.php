@@ -207,7 +207,7 @@
         <h3>🛠️ Gestion</h3>
         <div class="admin-links">
             <a href="/Marrakech_Food_Lovers/index.php?action=users"      class="btn btn-users">👥 Utilisateurs</a>
-            <a href="/Marrakech_Food_Lovers/index.php?action=recipes"    class="btn btn-recipes">🍽️ Recettes</a>
+            <a href="/Marrakech_Food_Lovers/admin_recipes.php"    class="btn btn-recipes">🍽️ Recettes</a>
             <a href="/Marrakech_Food_Lovers/index.php?action=categories" class="btn btn-category">🗂️ Catégories</a>
         </div>
     </div>

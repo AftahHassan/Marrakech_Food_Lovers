@@ -17,14 +17,21 @@ class RecipeController {
 
 
     // ---- CUISINIER : mes recettes ----
-    public function dashboard() {
-        if (session_status() === PHP_SESSION_NONE) session_start();
+          public function dashboard() {
+    if (session_status() === PHP_SESSION_NONE) session_start();
 
+    $category_filter = isset($_GET['category_id']) ? intval($_GET['category_id']) : 0;
 
-        $recipes = $this->recipeModel->getByUser($_SESSION['user_id']);
-        require_once __DIR__ . '/../views/cuisinier/dashboard.php';
+    // Tous voient TOUTES les recettes
+    if ($category_filter > 0) {
+        $recipes = $this->recipeModel->getByCategory($category_filter);
+    } else {
+        $recipes = $this->recipeModel->getAll();
     }
 
+    $categories = $this->categoryModel->getAll();
+    require_once __DIR__ . '/../views/cuisinier/dashboard.php';
+}
 
     // ---- CRÉER une recette ----
     public function create() {

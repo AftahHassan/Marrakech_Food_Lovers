@@ -31,12 +31,13 @@ if (session_status() === PHP_SESSION_NONE) {
                 <!-- ✅ ADMIN connecté -->
                 <?php if ($_SESSION['role'] === 'admin') : ?>
                     <li><a href="/Marrakech_Food_Lovers/dashboard.php">📊 Dashboard</a></li>
-                    <li><a href="/Marrakech_Food_Lovers/index.php?action=recipes">🍽️ Recettes</a></li>
+                    <li><a href="/Marrakech_Food_Lovers/admin_recipes.php">🍽️ Recettes</a></li>
                     
 
                 <!-- ✅ CUISINIER connecté -->
                 <?php else : ?>
-                    <li><a href="/Marrakech_Food_Lovers/dashboard.php">🏠 Dashboard</a></li>
+                    <a href="/Marrakech_Food_Lovers/dashboard.php">🏠 Dashboard</a>
+                    
                     
 
                 <?php endif; ?>

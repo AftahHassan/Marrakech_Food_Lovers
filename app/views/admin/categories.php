@@ -164,7 +164,7 @@
 
     <div class="page-header">
         <h1>🗂️ Gestion des catégories</h1>
-        <a href="/Marrakech_Food_Lovers/app/views/admin/add_category.php" class="btn-add">➕ Ajouter une catégorie</a>
+        <a href="/Marrakech_Food_Lovers/add_category.php" class="btn-add">➕ Ajouter une catégorie</a>
     </div>
 
     <?php if (isset($_GET['msg']) && $_GET['msg'] === 'deleted') : ?>
@@ -191,10 +191,10 @@
                     <td><?= $category['id'] ?></td>
                     <td><strong><?= htmlspecialchars($category['name']) ?></strong></td>
                     <td>
-                        <a href="/Marrakech_Food_Lovers/admin/edit_category.php?id=<?= $category['id'] ?>"
+                        <a href="/Marrakech_Food_Lovers/edit_category.php?id=<?= $category['id'] ?>"
                            class="btn-edit">✏️ Modifier</a>
 
-                        <a href="/Marrakech_Food_Lovers/admin/delete_category.php?id=<?= $category['id'] ?>"
+                        <a href="/Marrakech_Food_Lovers/delete_category.php?id=<?= $category['id'] ?>"
                            onclick="return confirm('Supprimer cette catégorie ?')"
                            class="btn-delete">🗑️ Supprimer</a>
                     </td>
