@@ -36,7 +36,7 @@ if (session_status() === PHP_SESSION_NONE) {
 
                 <!-- ✅ CUISINIER connecté -->
                 <?php else : ?>
-                    <a href="/Marrakech_Food_Lovers/dashboard.php">🏠 Dashboard</a>
+                    <a href="/Marrakech_Food_Lovers/dashboard.php" class="dashboard-acuisinier">🏠 Dashboard</a>
                     
                     
 
