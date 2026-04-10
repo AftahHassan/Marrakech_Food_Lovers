@@ -206,7 +206,7 @@ if ($_SESSION['role'] !== 'cuisinier' && $_SESSION['role'] !== 'admin') {
 <div class="filter-box">
     <form action="/Marrakech_Food_Lovers/dashboard.php" method="GET">
         <label for="category_id">Filtrer par catégorie :</label>
-        <select name="category_id" id="category_id" onchange="this.form.submit()">
+<select name="category_id" id="category_id" onchange="filterCategory(this.value)">
             <option value="0">Toutes les catégories</option>
             <?php foreach ($categories as $cat) : ?>
                 <option value="<?= $cat['id'] ?>"
@@ -219,6 +219,13 @@ if ($_SESSION['role'] !== 'cuisinier' && $_SESSION['role'] !== 'admin') {
             <a href="/Marrakech_Food_Lovers/dashboard.php">🔄 Réinitialiser</a>
         <?php endif; ?>
     </form>
+    <script>
+function filterCategory(categoryId) {
+    window.location.hash = 'category=' + categoryId;
+    // Simple reload with hash - stays "same page" feel, no full refresh effect
+    window.location.search = '?category_id=' + categoryId;
+}
+    </script>
 </div>
 
 
