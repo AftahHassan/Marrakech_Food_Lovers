@@ -17,32 +17,39 @@ if ($_SESSION['role'] !== 'cuisinier' && $_SESSION['role'] !== 'admin') {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 30px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
     animation: slideInUp 0.6s ease-out;
 }
 .dashboard-header h2 {
     font-size: 42px;
     font-weight: 800;
-    background: linear-gradient(135deg, #ff6b9d 0%, #c34a7b 100%);
+    background: linear-gradient(135deg, #21201fe4 0%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+.filter-label {
+    font-size: 40px;
+    font-weight: 700;
 }
 .btn-new-prompt {
     display: flex;
     align-items: center;
     gap: 8px;
     padding: 12px 24px;
-    background: linear-gradient(135deg, #ff6b9d 0%, #c34a7b 100%);
+    background: linear-gradient(135deg, #21201fe4 0%);
     color: white;
     text-decoration: none;
     border-radius: 10px;
     font-weight: 700;
     font-size: 15px;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(255, 107, 157, 0.3);
+    box-shadow: 0 4px 15px rgba(40, 36, 38, 0.3);
 }
 .btn-new-prompt:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(255, 107, 157, 0.4);
+    box-shadow: 0 8px 25px rgba(40, 37, 38, 0.4);
 }
 .btn-new-prompt-icon { font-size: 20px; font-weight: 400; }
 .filter-box {
@@ -205,7 +212,7 @@ if ($_SESSION['role'] !== 'cuisinier' && $_SESSION['role'] !== 'admin') {
 <!-- FILTRE PAR CATEGORIE -->
 <div class="filter-box">
     <form action="/Marrakech_Food_Lovers/dashboard.php" method="GET">
-        <label for="category_id">Filtrer par catégorie :</label>
+        <label for="category_id" class="filter-label">Filtrer par catégorie :</label>
 <select name="category_id" id="category_id" onchange="filterCategory(this.value)">
             <option value="0">Toutes les catégories</option>
             <?php foreach ($categories as $cat) : ?>
