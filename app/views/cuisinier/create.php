@@ -82,7 +82,7 @@ button[type="submit"]:hover { transform: translateY(-3px); }
 
 
 <main>
-    <a href="/Marrakech_Food_Lovers/dashboard.php" class="btn-back">← Retour au Dashboard</a>
+    <a href="/Marrakech_Food_Lovers/admin_recipes.php" class="btn-back">← Retour au Dashboard</a>
 
 
     <div class="form-container">
