@@ -1,8 +1,3 @@
-Voici **un seul fichier README.md complet**, propre et prêt à copier-coller dans ton projet 👇
-
----
-
-````markdown
 # 🍽️ Marrakech Food Lovers
 
 ## 📌 Description
@@ -18,10 +13,10 @@ Elle permet aux utilisateurs de partager et gérer des recettes marocaines organ
 
 ## 🎯 Objectifs
 
-* Gérer des recettes de manière structurée  
-* Implémenter une authentification sécurisée  
-* Séparer les rôles (admin / cuisinier)  
-* Appliquer une architecture MVC claire  
+* Gérer des recettes de manière structurée
+* Implémenter une authentification sécurisée
+* Séparer les rôles (admin / cuisinier)
+* Appliquer une architecture MVC claire
 
 ---
 
@@ -32,14 +27,7 @@ Admin :
 Email : admin@foodlovers.com
 Mot de passe : admin123
 
-Cuisinier :
-Email : fatima@foodlovers.com
-Mot de passe : admin123
-
-Cuisinier :
-Email : youssef@foodlovers.com
-Mot de passe : admin123
-````
+```
 
 ⚠️ **Important** : changer les mots de passe après connexion.
 
@@ -152,7 +140,7 @@ Le fichier `database/food_lovers.sql` contient :
 ### 1️⃣ Cloner le projet
 
 ```bash
-git clone https://github.com/username/marrakech-food-lovers.git
+git clone https://github.com/AftahHassan/Marrakech_Food_Lovers.git
 ```
 
 ---
@@ -160,7 +148,7 @@ git clone https://github.com/username/marrakech-food-lovers.git
 ### 2️⃣ Importer la base de données
 
 * Ouvrir **phpMyAdmin**
-* Créer une base : `marrakech_food_lovers`
+* Créer une base : `food_lovers`
 * Importer :
 
 ```
@@ -175,7 +163,7 @@ database/food_lovers.sql
 
 ```php
 define('DB_HOST', 'localhost');
-define('DB_NAME', 'marrakech_food_lovers');
+define('DB_NAME', 'food_lovers');
 define('DB_USER', 'root');
 define('DB_PASS', '');
 ```
@@ -222,7 +210,7 @@ http://localhost/marrakech-food-lovers/
 
 ## 👨‍💻 Auteur
 
-Projet réalisé par **Hassan**.
+Projet réalisé par **Hassan AFTAH** &  **ABDELLATIF BENCHEIKH**.
 
 ---
 
@@ -233,12 +221,3 @@ Projet réalisé par **Hassan**.
 ✔️ Architecture MVC
 ✔️ CRUD complet
 ✔️ Bonne organisation du code
-
-```
-
----
-
-Si tu veux, je peux maintenant :
-- ajouter **badges GitHub (PHP, MySQL, MVC)**  
-- ou transformer ça en **README premium pour portfolio 🔥**
-```
