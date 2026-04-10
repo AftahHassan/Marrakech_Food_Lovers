@@ -152,7 +152,7 @@
 
 <div class="admin-wrapper">
 
-    <a href="/Marrakech_Food_Lovers/admin/categories.php" class="btn-back">⬅ Retour aux catégories</a>
+    <a href="/Marrakech_Food_Lovers/categories.php" class="btn-back">⬅ Retour aux catégories</a>
 
     <div class="form-card">
         <div class="form-card-header">
@@ -178,7 +178,7 @@
 
             <div class="form-actions">
                 <button type="submit" class="btn-submit">Mettre à jour</button>
-                <a href="/Marrakech_Food_Lovers/admin/categories.php" class="btn-cancel">Annuler</a>
+                <a href="/Marrakech_Food_Lovers/categories.php" class="btn-cancel">Annuler</a>
             </div>
 
         </form>
